@@ -77,7 +77,7 @@ process.argv.forEach(function (val, index, array) {
 	}
 })
 
-var json = jsonfile.readFileSync(file)
+//var json = jsonfile.readFileSync(file)
 var last_30 = 30
 var mages_in_process = 0 
 
@@ -92,9 +92,9 @@ try {
 }
 
 fiber = function(){
-	for (var class_by_pop = 1; class_by_pop<last_30; class_by_pop++) {
+//	for (var class_by_pop = 1; class_by_pop<last_30; class_by_pop++) {
 		for (var i = 0; i<20; i++) {
-			id = json[json.length-class_by_pop-1]['id']
+//			id = json[json.length-class_by_pop-1]['id']
 //			if (id == 1191 && i < 5) i = 5
 			options['qs']['page'] = i
 			options['qs']['q[species_id_eq]'] = id
@@ -157,7 +157,7 @@ fiber = function(){
 				}
 			})
 		}
- 	}
+ 	//}
 }
 wait.launchFiber(fiber)
 
